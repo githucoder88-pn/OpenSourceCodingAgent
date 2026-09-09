@@ -6,6 +6,10 @@ export default defineConfig({
   server: {
     port: 5173,
     host: '0.0.0.0',
+    allowedHosts: true as any,
+    hmr: {
+      clientPort: 443,
+    },
     proxy: {
       '/api': 'http://localhost:3000',
       '/ws': {
