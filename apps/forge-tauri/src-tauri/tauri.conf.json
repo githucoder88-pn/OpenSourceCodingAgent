@@ -1,0 +1,41 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "Forge",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": { "all": false, "open": true },
+      "dialog": { "all": true },
+      "fs": { "all": true, "scope": ["$HOME/**", "$RESOURCE/**"] },
+      "path": { "all": true },
+      "http": { "all": true, "scope": ["http://localhost:3000/**", "ws://localhost:3000/**"] }
+    },
+    "bundle": {
+      "active": true,
+      "identifier": "com.forge.app",
+      "icon": ["icons/icon.png"],
+      "targets": "all"
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 900,
+        "resizable": true,
+        "title": "Forge - AI Engineering Platform",
+        "width": 1400
+      }
+    ]
+  }
+}

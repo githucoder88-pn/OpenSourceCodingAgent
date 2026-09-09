@@ -1,0 +1,34 @@
+[workspace]
+members = [
+  "crates/forge-core",
+  "crates/forge-protocol",
+  "crates/forge-models",
+  "crates/forge-tools",
+  "crates/forge-server",
+  "crates/forge-cli",
+  "crates/forge-search",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Forge Contributors"]
+repository = "https://github.com/githucoder88-pn/OpenSourceCodingAgent"
+
+[workspace.dependencies]
+tokio = { version = "1.38", features = ["full"] }
+axum = { version = "0.7", features = ["ws"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+uuid = { version = "1.8", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "2.0"
+anyhow = "1.0"
+futures = "0.3"
+async-trait = "0.1"
+clap = { version = "4.5", features = ["derive"] }

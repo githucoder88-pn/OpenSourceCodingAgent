@@ -1,0 +1,28 @@
+{
+  "name": "forge",
+  "version": "0.1.0",
+  "description": "Open-source AI engineering platform for autonomous coding agents and collaborative agent teams",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test && cargo test --workspace",
+    "lint": "pnpm -r lint",
+    "forge": "node packages/forge-core-js/dist/cli.js",
+    "server": "node packages/forge-core-js/dist/server.js",
+    "web": "pnpm --filter forge-web dev",
+    "tauri": "pnpm --filter forge-tauri dev",
+    "electron": "pnpm --filter forge-electron dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

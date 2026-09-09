@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+dist/
+build/
+out/
+target/
+
+# Forge
+.forge/
+*.log
+
+# Env
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rust
+Cargo.lock
+**/*.rs.bk
+
+# Tauri
+apps/forge-tauri/src-tauri/target/
+
+# Electron
+apps/forge-electron/dist/
+
+# Web
+apps/forge-web/dist/
+apps/forge-web/node_modules/
+
+# Tests
+coverage/
+.nyc_output/

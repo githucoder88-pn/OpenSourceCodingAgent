@@ -1,0 +1,10 @@
+{
+  "name": "forge-example-plugin",
+  "version": "0.1.0",
+  "main": "index.js",
+  "forge": {
+    "minVersion": "0.1.0",
+    "tools": ["my_custom_tool"],
+    "commands": ["/mycommand"]
+  }
+}

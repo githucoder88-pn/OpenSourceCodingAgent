@@ -1,0 +1,5 @@
+{
+  "name": "@forge/icons",
+  "version": "0.1.0",
+  "main": "src/index.ts"
+}
